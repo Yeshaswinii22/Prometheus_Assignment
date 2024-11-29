@@ -38,6 +38,7 @@ docker-compose down
 ```
 http://localhost:5000
 ```
+## Snapshot
 
 ### Prometheus and Grafana Setup
 
@@ -50,6 +51,8 @@ Access the Prometheus UI at:
 ```
 http://localhost:9092
 ```
+## snapshot
+
 ### Grafana Setup
 
 1.Once Grafana is running, log in to the Grafana dashboard:
@@ -57,3 +60,6 @@ http://localhost:9092
 http://localhost:3001
 ```
 2.Add Prometheus as a data source.
+
+## Snapshot
+
