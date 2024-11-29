@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s  # Scrape every 15 seconds
+
+scrape_configs:
+  # Scrape configuration for the Flask app
+  - job_name: 'flask-app'
+    metrics_path: '/metrics'  # Path to the metrics endpoint exposed by Flask
+    static_configs:
+      - targets: ['172.24.0.2:8000']  # The target for scraping metrics (the Flask app running in the Docker container)
+    
+  # Add default Prometheus scrape config
+  - job_name: 'prometheus'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['localhost:9090']
